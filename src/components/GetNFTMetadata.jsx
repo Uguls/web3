@@ -3,17 +3,17 @@ import { useReadContract } from 'wagmi';
 import axios from 'axios';
 import abi from '../abi/ERC721_ABI.json'
 
-const GetNftMetadata = ({tokenID}) => {
+const GetNftMetadata = ({tokenID, contractaddress}) => {
 	const [metadata, setMetadata] = useState(null);
 	const [isMetadataLoading, setIsMetadataLoading] = useState(false);
 	const [metadataError, setMetadataError] = useState(null);
 
-	const contractAddress = '0x5E28ab57D09C589ff5C7a2970d911178E97Eab81'; // Cool Cats 컨트랙트 주소
+	// const contractAddress = '0x5E28ab57D09C589ff5C7a2970d911178E97Eab81'; // Cool Cats 컨트랙트 주소
 	const tokenId = 234;
 
 	const { data: tokenURI, isLoading: isTokenURILoading, isError: isTokenURIError } = useReadContract({
 		abi,
-		address: contractAddress,
+		address: contractaddress,
 		functionName: 'tokenURI',
 		args: [tokenID]
 	});

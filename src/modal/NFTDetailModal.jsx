@@ -38,6 +38,8 @@ const NFTDetailModal = ({ isOpen, onRequestClose, nft }) => {
 
 	if (!nft) return null; // nft가 없을 때는 모달을 렌더링하지 않습니다.
 
+	console.log(nft)
+
 	return (
 		<Modal
 			isOpen={isOpen}
@@ -66,7 +68,7 @@ const NFTDetailModal = ({ isOpen, onRequestClose, nft }) => {
 			) : (
 				<>
 					<div>
-						<GetNftMetadata tokenID={nft.tokenID}/>
+						<GetNftMetadata tokenID={nft.tokenID} contractaddress={nft.contractAddress}/>
 					</div>
 					<div>
 						<div><strong>Token ID:</strong> {nft.tokenID}</div>
