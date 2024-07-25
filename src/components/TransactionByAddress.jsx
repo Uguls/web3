@@ -1,5 +1,8 @@
 import {getNormalTransactionList} from "../API/Etherscan.jsx";
 import {useEffect, useState} from "react";
+import Web3 from "web3"
+
+const web3 = new Web3();
 
 const TransactionByAddress = ({ address }) => {
 	const [normalTransactions, setNormalTransactions] = useState([]);
@@ -19,13 +22,15 @@ const TransactionByAddress = ({ address }) => {
 		<div className={"transactions"}>
 			{normalTransactions.length > 0 ? (
 				<ul>
-					{normalTransactions.map((tx) => (
+					{normalTransactions.slice().reverse().map((tx) => (
 						<li className={"transactions_each"} key={tx.hash}>
-							<div>Hash: {tx.hash}</div>
+							<div>
+								<a href={`https://sepolia.etherscan.io/tx/${tx.hash}`}>Hash: {tx.hash}</a>
+							</div>
 							<div>Block: {tx.blockNumber}</div>
 							<div>From: {tx.from}</div>
 							<div>To: {tx.to}</div>
-							<div>Value: {tx.value} WEI</div>
+							<div>Value: {web3.utils.fromWei(tx.value, 'ether')} ETH</div>
 							<div>Gas Used: {tx.gasUsed}</div>
 							<div>Timestamp: {new Date(tx.timeStamp * 1000).toLocaleString()}</div>
 						</li>
