@@ -1,0 +1,39 @@
+body {
+  justify-content: center;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.App_title {
+  display: flex;
+  font-size: 70px;
+}
+
+.title {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.connect-button {
+  display: flex;
+  /*margin-top: 25px;*/
+  align-items: center;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 미디어 쿼리 추가 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}

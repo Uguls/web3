@@ -1,0 +1,42 @@
+.Account_info, .Account_addresses, .Account_transactions {
+    border: solid skyblue;
+    border-radius: 10px;
+}
+
+.Info_addresses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.detail {
+    padding: 10px;
+    font-size: 19px;
+}
+
+.detail div{
+    border-bottom: solid black;
+    padding: 7px;
+}
+
+.Account_transactions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.showButton {
+    width: 100%;
+    font-size: 20px;
+    background-color: grey;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.transactions_each {
+    border: solid grey;
+    border-radius: 10px;
+    margin: 20px;
+}

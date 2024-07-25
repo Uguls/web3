@@ -1,0 +1,19 @@
+.SendEther {
+    display: flex;
+    flex-direction: column;
+    border: solid skyblue;
+    padding: 10px;
+}
+
+.Address, .value, .send_button{
+    margin: 10px;
+}
+
+.Address, .value {
+    height: 30px;
+}
+
+.send_button {
+    font-size: 20px;
+    padding: 10px;
+}
