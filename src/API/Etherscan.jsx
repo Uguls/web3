@@ -33,8 +33,8 @@ export async function getTransactionCount (address) {
 이더스캔 api를 사용하여 address를 인자로 받은 후 해당 주소의 NormalTransactionList를 반환하는 코드 작성
 비동기로 처리 한후 promise객체를 반환하여 TransactionByAddress컴포넌트에서 비동기로 처리
  */
-export async function getNormalTransactionList(address, startBlock = 0, endBlock = 99999999, page = 0, offset = 10, sort = 'asc') {
-	const url = `https://api-sepolia.etherscan.io/api?module=account&action=txlist&address=${address}&startblock=${startBlock}&endblock=${endBlock}&page=${page}&offset=${offset}&sort=${sort}&apikey=${apiKey}`;
+export async function getNormalTransactionList(address, currentPage, startBlock = 0, endBlock = 99999999, offset = 5, sort = 'asc') {
+	const url = `https://api-sepolia.etherscan.io/api?module=account&action=txlist&address=${address}&startblock=${startBlock}&endblock=${endBlock}&page=${currentPage}&offset=${offset}&sort=${sort}&apikey=${apiKey}`;
 
 	try {
 		const res = await axios.get(url);
