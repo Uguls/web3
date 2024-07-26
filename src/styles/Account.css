@@ -33,10 +33,53 @@
     border-radius: 10px;
     padding: 10px;
     color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.showButton:hover {
+    background-color: darkgrey;
 }
 
 .transactions_each {
     border: solid grey;
     border-radius: 10px;
     margin: 20px;
+}
+
+.pagination_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination:hover {
+    background-color: #0056b3;
+}
+
+.pagination:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.currentPage {
+    font-size: 30px;
+    padding: 10px;
+    margin: 5px;
 }
