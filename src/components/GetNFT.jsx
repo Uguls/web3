@@ -13,8 +13,6 @@ const GetNFT = () => {
 	const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
 	const [error, setError] = useState(null);
 
-	const { transferNFT } = useNFTTransfer();
-
 	useEffect(() => {
 		const fetchNFTList = async () => {
 			if (address) {

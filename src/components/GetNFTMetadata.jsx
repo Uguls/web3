@@ -9,7 +9,7 @@ const GetNftMetadata = ({tokenID, contractaddress}) => {
 	const [metadataError, setMetadataError] = useState(null);
 
 	// const contractAddress = '0x5E28ab57D09C589ff5C7a2970d911178E97Eab81'; // Cool Cats 컨트랙트 주소
-	const tokenId = 234;
+	// const tokenId = 234;
 
 	const { data: tokenURI, isLoading: isTokenURILoading, isError: isTokenURIError } = useReadContract({
 		abi,
