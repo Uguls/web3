@@ -38,7 +38,7 @@ const NFTDetailModal = ({ isOpen, onRequestClose, nft }) => {
 
 	if (!nft) return null; // nft가 없을 때는 모달을 렌더링하지 않습니다.
 
-	console.log(nft)
+	// console.log(nft)
 
 	return (
 		<Modal
